@@ -440,6 +440,7 @@
                         <h3><i class="fas fa-gas-pump"></i> From Diesel</h3>
                         <div class="carbon-value" id="diesel-carbon">0</div>
                         <div class="unit">kilograms of CO2e</div>
+                        <div class="unit">(weekly)</div>
                     </div>
                     
                     <div class="breakdown-item">
@@ -492,8 +493,8 @@
             const electricity = parseFloat(document.getElementById('electricity').value) || 0;
             
             // Calculate carbon emissions
-            const dieselCarbon = diesel * 2.7446;
-            const electricityCarbon = electricity * 0.5821;
+            const dieselCarbon = (diesel * 2.7446)/4;
+            const electricityCarbon = (electricity * 0.5821)/4;
             const totalCarbon = dieselCarbon + electricityCarbon;
             
             // Calculate trees needed to offset (estimate: 1 tree absorbs 22 kg CO2 per year)
