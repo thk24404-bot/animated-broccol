@@ -499,7 +499,8 @@
             const totalCarbon = dieselCarbon + electricityCarbon;
             
             // Calculate trees needed to offset (estimate: 1 tree absorbs 22 kg CO2 per year)
-            const treeEquivalent = Math.ceil(totalCarbon / 22);
+            
+            const treeEquivalent = Math.ceil(totalCarbon * 52/ 22);
             
             // Display results
             document.getElementById('diesel-carbon').textContent = dieselCarbon.toFixed(2);
