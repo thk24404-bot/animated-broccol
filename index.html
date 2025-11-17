@@ -515,10 +515,18 @@
             const treeEquivalent = Math.ceil(totalCarbon * 52/ 22);
             
             // Display results
-          document.getElementById('diesel-carbon').textContent = dieselCarbon.toFixed(2).toLocaleString();
-          document.getElementById('electricity-carbon').textContent = electricityCarbon.toFixed(2).toLocaleString();
-          document.getElementById('total-carbon').textContent = totalCarbon.toFixed(2).toLocaleString();
-          document.getElementById('tree-equivalent').textContent = treeEquivalent.toLocaleString();
+         document.getElementById('diesel-carbon').textContent =
+                Number(dieselCarbon.toFixed(2)).toLocaleString();
+
+         document.getElementById('electricity-carbon').textContent =
+                Number(electricityCarbon.toFixed(2)).toLocaleString();
+
+         document.getElementById('total-carbon').textContent =
+                Number(totalCarbon.toFixed(2)).toLocaleString();
+
+         document.getElementById('tree-equivalent').textContent =
+                Number(treeEquivalent).toLocaleString();
+
 
             // Animate progress bar
             const progressBar = document.getElementById('carbon-progress');
