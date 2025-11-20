@@ -508,11 +508,11 @@
             // Calculate carbon emissions
             const dieselCarbon = (diesel * 2.7446)/4;
             const electricityCarbon = (electricity * 0.5821)/4;
-            const totalCarbon = dieselCarbon + electricityCarbon;
-            
+            const totalCarbon = (dieselCarbon + electricityCarbon)*4;
+            const totalCarbonWeekly = dieselCarbon + electricityCarbon;
             // Calculate trees needed to offset (estimate: 1 tree absorbs 22 kg CO2 per year)
             
-             const treeEquivalent = Math.ceil(([(diesel * 2.7446)+(electricity * 0.5821)] * 12)/ 22);
+             const treeEquivalent = Math.ceil (totalCarbon * 12/ 22);
             
             // Display results
          document.getElementById('diesel-carbon').textContent =
